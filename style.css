@@ -1,0 +1,190 @@
+/* General */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif ;
+    font-size: 14px;
+}
+
+body {
+    height: 100vh;
+    padding: 0 3em; 
+}
+
+h1, h2, h3 {letter-spacing: 0.06em;}
+
+h1 {font-size: 24px;}
+
+h2 {font-size: 18px;}
+
+h3 {font-size: 14px;}
+
+/* Title */
+
+#title {
+    border:medium black solid;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.1em 0.15em 0.1em 0.2em;
+    word-spacing: 0.3em;
+}
+
+/* Header and Footer */
+
+header, footer{
+    height: 10%;
+    width: 100%;
+}
+
+footer {text-align: center;}
+
+/* Section */
+
+section {
+    display: block;
+    min-height: 80%;
+    position: relative;
+}
+
+/* Lists */
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin: 0em 0em 0em 0.75em;
+}
+
+.breadcrumb {border-bottom: 2px solid black;}
+
+/* Links */
+
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+svg {
+    height: 2.4em;
+    width: 2.4em;
+}
+
+/* Greeting */
+
+hgroup {
+    animation: animation 2s 1 forwards;
+    text-shadow: 1px 1px 2px #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Animation */
+
+@keyframes animation{
+    0% { 
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+/* Resume */
+
+#other-info ul{text-indent: 4ch;}
+
+#email-info {
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+}
+
+/* Contact */
+
+input[type='text'], textarea {width: 100%;}
+
+textarea {resize: none;}
+
+/* Card */
+
+.card {
+    box-shadow: 1px 1px 2px black;
+    margin: 0 auto;
+    padding: 1em 2em;
+}
+
+/* Media */
+
+@media (max-width:600px) {
+
+    h1 {font-size: 18px;}
+    h2 {font-size: 14px;}
+    
+    /* Borderless and Compact */
+    
+    .card {box-shadow: none;}
+    
+    body{
+        padding: 0 1.5em; 
+    }
+    
+    section {min-height: 70%;}
+    
+    /* Split */
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        display: inline-block;
+    }
+
+    header nav{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-height:670px){
+    .card {box-shadow: none;}
+}
+
+
+@media (min-width:600px) {
+
+    header {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+@media (min-width:800px){
+
+    .card {
+        height: 60%;
+        width: 40%;
+    }
+    
+    /* Center */
+
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
